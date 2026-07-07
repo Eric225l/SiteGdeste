@@ -146,3 +146,43 @@ body{
 
 /*Fim da pagina O que fazemos*/
 
+/*Pagina Equipes*/
+
+.EQUIPES{
+    height: 600px;
+    width: 100%;
+    background-color: #BAB7AF;
+}
+
+/*Fim da pagina Equipes*/
+
+/*Pagina Publicações*/
+
+.PUBLICAÇÕES{
+    height: 600px;
+    width: 100%;
+}
+
+/*Fim da pagina Publicações*/
+
+/*Pagina Instalação*/
+
+.INSTALAÇÃO{
+    height: 600px;
+    width: 100%;
+    background-color: #BAB7AF;
+}
+
+/*Fim da pagina Instalação*/
+
+/*Pagina Institucional*/
+
+.INSTITUCIONAL{
+    height: 600px;
+    width: 100%;
+}
+
+/*Fim da pagina Institucional
+
+/*Rodapé*/
+
