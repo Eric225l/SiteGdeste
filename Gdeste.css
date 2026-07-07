@@ -1,8 +1,14 @@
+/*IBM PLEX SANS e JETBRAINS MONO*/
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
 body{
     margin: 0;
     padding: 0;
-    
+    background-color: #EBF3F3;
+    font-family: "IBM Plex Sans", sans-serif;
 }
+
+/*Cabeçalho*/
 
 .header{
     height:80px;
@@ -26,7 +32,6 @@ body{
     height: 70px;
     background-color: rgb(255, 255, 255);
     gap: 30px;
-    
 }
 
 .option-text{
@@ -35,10 +40,8 @@ body{
 
 .option-button{
     background: none;
-    border:0;
-    transition: 0.5s;
-    animation: ease-in-out;
-    
+    border:transparent;
+    transition: all 0.2s ease-in-out;
 }
 .option-button:hover{
     border-bottom:2px solid #BC6D0A;
@@ -49,3 +52,97 @@ body{
     height: 30px;
     width: 50px;
 }
+
+/*Fim Do Cabeçalho*/
+
+/*Pagina O que Fazemos*/
+
+.NOS{
+    margin:0;
+    padding:0;
+    height: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.div-nos{
+    width: 80%;
+    height: 90px;
+    margin-bottom: 30px;
+}
+
+.text-nos{
+    margin:0;
+    padding:0;
+    font-size: 80px;
+    margin-left: 6%;
+}
+.info{
+    width: 80%;
+    height: 50px;
+}
+
+.text-info{
+    height: 40px;
+    width: 80%;
+    margin-left: 7%;
+
+}
+.cards-info{
+    height: 320px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 3%;
+}
+
+.div-cards{
+    height: 320px;
+    width: 310px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 30px rgb(0, 0, 0)
+}
+
+.text-card{
+    width: 100%;
+    height:240px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text{
+    margin-top: 50px;
+    height:200px;
+    width: 75%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.desc-card{
+    height: 80px;
+    width: 100%;
+    background-color: #14213D;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.desc{
+    width: 50%;
+    text-align: center;
+    font-family: "JetBrains Mono", monospace;
+}
+
+/*Fim da pagina O que fazemos*/
+
