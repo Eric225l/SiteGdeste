@@ -20,7 +20,7 @@ body{
     
 } 
 
-.img-logo{
+.img-logo-cabecalho{
     height:35px;
     width:110px;
     margin-left: -30px;
@@ -158,7 +158,7 @@ body{
 
 /*Pagina Publicações*/
 
-.PUBLICAÇÕES{
+.PUBLICACOES{
     height: 600px;
     width: 100%;
 }
@@ -167,7 +167,7 @@ body{
 
 /*Pagina Instalação*/
 
-.INSTALAÇÃO{
+.INSTALACAO{
     height: 600px;
     width: 100%;
     background-color: #BAB7AF;
@@ -182,7 +182,79 @@ body{
     width: 100%;
 }
 
-/*Fim da pagina Institucional
+/*Fim da pagina Institucional*/
+
+.footer{
+    height:180px;
+    width: 100%;
+    background-color: #BAB7AF;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.logo-instituto{
+    height: 70px;
+    width: 270px;
+}
+
+.div-localizacao{
+    height: 140px;
+    width: 250px;   
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.text-endereco{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.div-comunicacao{
+    height: 140px;
+    width: 200px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.text-contato{
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: -5px;
+    margin-top: 20px;
+}
+
+.logo-redes{
+    height: 30px;
+    width: 30px;
+}
+
+.div-redes{
+    display:flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.div-laboratorio{
+    height: 100px;
+    width: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.img-logo-rodape{
+    height:35px;
+    width:110px;
+    margin-bottom: 20px;
+}
+
 
 /*Rodapé*/
 
