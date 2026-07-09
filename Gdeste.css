@@ -67,7 +67,7 @@ body{
     align-items: center;
     flex-direction: column;
 }
-.div-nos{
+.div-text-nos{
     width: 80%;
     height: 90px;
     margin-bottom: 30px;
@@ -78,6 +78,7 @@ body{
     padding:0;
     font-size: 80px;
     margin-left: 6%;
+    font-weight: 400;
 }
 .info{
     width: 80%;
@@ -182,40 +183,66 @@ body{
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     flex-direction: column;
+    gap: 40px;
 }
 
 .div-text-institucional{
     height: 90px;
     width: 80%;
+    font-size: 80px;
+    margin-top: -30px;
+    margin-bottom: 80px;
+    font-weight: 400;
+    margin-left:6%;
 }
 
 .div-institucional{
     height: 350px;
     width: 80%;
     display: flex;
-    align-items: center;
+    align-items:center;
     justify-content: center;
     flex-direction:row;
-    gap: 25px;
+    gap: 5%;
 }
 
 .section-institucional{
     height: 300px;
-    width: 300px;
-    background-color: aqua;
+    width: 220px;
     display: flex;
     justify-content: start;
     align-items: center;
     flex-direction: column;
+    text-align: center;
 }
 
 .img-institucional{
-    height: 50px;
-    width: 50px;
+    height: 70px;
+    width: 70px;
 }
 
+.text-titulo{
+    font-size: 18px;
+    margin-bottom: -5px;
+    font-weight: 500;
+}
+
+.text-descricao{
+    font-size: 18px;
+}
+
+.button-ver-mais{
+    font-size: 15px;
+    background: none;
+    border: transparent;
+    transition: all 0.2s ease;
+
+}
+.button-ver-mais:hover{
+    border-bottom: 2px solid #BC6D0A;
+}
 
 
 /*Fim da pagina Institucional*/
