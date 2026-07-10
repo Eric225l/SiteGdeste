@@ -71,7 +71,7 @@ body{
     width: 80%;
     height: 90px;
     margin-bottom: 30px;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 .text-nos{
@@ -173,7 +173,7 @@ body{
 .div-text-publicacoes{
     height: 90px;
     width: 80%;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 .text-publicacoes{
@@ -184,11 +184,12 @@ body{
 }
 
 .div-publicacoes{
-    height: 420px;
-    width: 80%;
+    height: 430px;
+    width: 70%;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-top: 1px solid black;
     gap: 3%;
 }
 
@@ -204,25 +205,38 @@ body{
     height: 390px;
     width: 300px;
     background-color: #BAB7AF;
+    border-radius: 10px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.2s ease-in-out
+}
+
+.publicacao:hover{
+    height: 400px;
+    width: 310px;
+    box-shadow:0px 0px 10px black
 }
 
 .tipo-publi{
     width: 100%;
     height: 30px;
+    margin-top: 10px ;
 }
 
 .text-tipo{
     height: 30px;
     width: 20%;
     margin: 0;
-    background-color: #14213D;
-    border-radius: 10px;
+    background-color: #14213D;   
+    border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
-    margin-left:20px ;
-    margin-top:10px ;
+    margin-left: 20px;
+    
 }
 
 .titulo-publi{
@@ -232,6 +246,8 @@ body{
     text-align: center;
     font-size: 20px;
     font-weight: 500;
+    margin-top: 10px;
+    
 }
 
 .localizacao-publi{
@@ -239,34 +255,45 @@ body{
     height: 30px;
     display: flex;
     justify-content: space-between;
+    font-size: 11px;
     margin-top: 10px;
 }
 
 .lugar-publi{
-    height: 30px;
-    width: 30%;
+    height: 20px;
+    width: 50%;
     background-color: #14213D;
-    border-radius: 10px;
+    border-radius: 5px;
     margin: 0;
     margin-left: 20px;
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
 }
 
 .ano-publi{
-    height: 30px;
+    height: 20px;
     width: 20%;
     background-color: #14213D;
-    border-radius: 10px;
+    border-radius: 5px;
     margin: 0;
     margin-right: 20px;
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .text-publi{
-    width: 100%;
+    width: 80%;
     height: 200px;
-    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    margin-top:10px ;
+    font-size: 16px;
 }
 
 
