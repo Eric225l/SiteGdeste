@@ -214,9 +214,9 @@ body{
 }
 
 .publicacao:hover{
-    height: 400px;
-    width: 310px;
-    box-shadow:0px 0px 10px black
+    height: 392px;
+    width: 302px;
+    box-shadow:0px 0px 5px black
 }
 
 .tipo-publi{
