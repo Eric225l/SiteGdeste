@@ -15,10 +15,13 @@ body{
     flex-direction: column;
 }
 
+/* Seção do botão de Voltar */
+
 .section-button-voltar{
     height: 70px;
     width: 100%;
-    background-color: aqua;
+    display: flex;
+    align-items: center;
 }
 
 .div-button-voltar{
@@ -27,17 +30,227 @@ body{
 
 .button-voltar{
     height: 30px;
-    width: 270px;
-    display:flex ;
+    width: 255px;
+    display: flex;
     align-items: center;
     justify-content: space-between;
     border: none;
-    font-size: 20px;
+    font-size: 19px;
+    font-weight: 100;
 }
-
 
 .img-seta{
-    height: 25px;
-    width: 25px;
+    height: 20px;
+    width: 20px;
     rotate: 180deg;
 }
+
+/*Fim*/
+
+/*Seção do titulo de publicações*/
+
+.section-text-publicacao{
+    height: 90px;
+    width: 80%;
+    margin: 0;
+    margin-top: 20px;
+}
+
+.text-publicacoes{
+    font-size: 70px;
+    margin: 0;
+    margin-left: 6%;
+}
+
+/*Fim*/
+
+/*Seção dos botões de tipo de publicação*/
+
+.section-tipo-publicacao{
+    height: 90px;
+    width: 80%;
+    display: flex;
+    align-items: end;
+}
+
+.div-tipo-publicacao{
+    height: 60px;
+    width: 88%;
+    margin: 0;
+    margin-left: 6%;
+    display: flex;
+    align-items: center;
+    gap:20px;
+    border-bottom:1px solid black;
+}
+
+.option-button{
+    height: 10px;
+}
+
+.button-tipo-publicacao{
+    font-size:15px;
+    background:0;
+    border:transparent;
+    transition:0.2s all ease-in-out;
+
+}
+
+.button-tipo-publicacao:hover{
+    border-bottom: 2px solid #BC6D0A;
+}
+
+/*Fim*/
+
+/*Seção da publicações*/
+
+.section-publicacoes{
+    margin: 0;
+    margin-top: 30px;
+    height: 810px;
+    width: 80%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: start;
+    justify-content: center;
+    gap: 3%;
+
+}
+
+.div-publicacao{
+    margin: 0;
+    height: 400px;
+    width: 310px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-publi{
+    height: 400px;
+    width: 310px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.publicacao{
+    height: 390px;
+    width: 300px;
+    background-color: #BAB7AF;
+    border-radius: 10px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.2s ease-in-out
+}
+
+.publicacao:hover{
+    height: 392px;
+    width: 302px;
+    box-shadow:0px 0px 5px black
+}
+
+.tipo-publi{
+    width: 100%;
+    height: 30px;
+    margin-top: 10px ;
+}
+
+.text-tipo{
+    height: 30px;
+    width: 20%;
+    margin: 0;
+    background-color: #14213D;   
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-left: 20px;
+    
+}
+
+.titulo-publi{
+    width: 100%;
+    height: 80px;
+    margin-top:10px ;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 10px;
+    
+}
+
+.localizacao-publi{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    margin-top: 10px;
+}
+
+.lugar-publi{
+    height: 20px;
+    width: 50%;
+    background-color: #14213D;
+    border-radius: 5px;
+    margin: 0;
+    margin-left: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.ano-publi{
+    height: 20px;
+    width: 20%;
+    background-color: #14213D;
+    border-radius: 5px;
+    margin: 0;
+    margin-right: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-publi{
+    width: 80%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    margin-top:10px ;
+    font-size: 16px;
+}
+
+/*Fim*/
+
+/*Seção do texto de mais publicações em andamento*/
+
+.section-mais-publicacoes{
+    height: 250px;
+    width: 80%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+
+.div-mais-publicacoes{
+    height: 80px;
+    width: 88%;
+    margin-top: 30px;
+    border-bottom:1px solid black ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/*Fim*/
