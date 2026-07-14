@@ -161,6 +161,18 @@ body{
     align-items: center;
     justify-content: start;
     flex-direction: column;
+    transition: 0.2s all ease-in-out;
+}
+
+.EQUIPES-ACTIVE{
+    height: 900px;
+    width: 100%;
+    background-color: #BAB7AF;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    transition: 0.2s all ease-in-out;
 }
 
 
@@ -183,13 +195,27 @@ body{
 .div-equipes{
     height: 350px;
     width: 80%;
-    margin-top: 30px;
+    margin-top: 60px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     flex-direction: column;
     gap: 30px;
+    transition: 0.2s all ease-in-out;
 }
+
+.div-equipes-active{
+    height: 650px;
+    width: 80%;
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    gap: 30px;
+    transition: 0.2s all ease-in-out;
+}
+
 
 .equipe{
     height: 60px;
@@ -197,21 +223,36 @@ body{
     background-color: black;
     border-radius: 10px;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
+    flex-direction: column;
     transition: 0.2s all ease-in-out ;
-    
 }
+
 
 .equipe:hover{
     background-color: rgb(29, 29, 29);
+}
+
+.equipe-active{
+    height: 350px;
+    width: 88%;
+    background-color: black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.2s all ease-in-out ;
+    box-shadow: 0px 0px 10px black;
 }
 
 .info-equipe{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%;;
+    width: 90%;
+    margin-top: 5px;
 }
 
 .text-equipe{
@@ -221,6 +262,11 @@ body{
 }
 
 .div-membros{
+    display:none;
+    transition: 0.2s all ease-in-out;
+}
+
+.div-membros-active{
     height:300px;
     width: 90%;
     background-color: antiquewhite;
