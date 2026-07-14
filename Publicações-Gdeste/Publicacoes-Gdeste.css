@@ -24,8 +24,9 @@ body{
     align-items: center;
 }
 
-.div-button-voltar{
+.a-button-voltar{
     margin-left: 3%;
+    text-decoration: none;
 }
 
 .button-voltar{
