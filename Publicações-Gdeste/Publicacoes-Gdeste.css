@@ -98,6 +98,7 @@ body{
 
 .button-tipo-publicacao:hover{
     border-bottom: 2px solid #BC6D0A;
+    transition: 0.2s all ease-in-out;
 }
 
 /*Fim*/
@@ -144,13 +145,14 @@ body{
     display: flex;
     align-items: center;
     flex-direction: column;
-    transition: all 0.2s ease-in-out
+    transition: all 0.2s ease-in-out;
 }
 
 .publicacao:hover{
     height: 392px;
     width: 302px;
-    box-shadow:0px 0px 5px black
+    box-shadow:0px 0px 5px black;
+    transition:all 0.2s ease-in-out;
 }
 
 .tipo-publi{
