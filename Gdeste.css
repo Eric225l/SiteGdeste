@@ -261,6 +261,16 @@ body{
     color:white;
 }
 
+.seta-equipes{
+    transition: 0.2s all ease-in-out;
+
+}
+
+.seta-equipes-active{
+    transform: rotate(180deg);
+    transition: 0.2s all ease-in-out;
+}
+
 .div-membros{
     display:none;
     transition: 0.2s all ease-in-out;
@@ -269,7 +279,7 @@ body{
 .div-membros-active{
     height:300px;
     width: 90%;
-    background-color: antiquewhite;
+    background-color: rgb(68, 81, 97);
 }
 
 /*Fim da pagina Equipes*/
