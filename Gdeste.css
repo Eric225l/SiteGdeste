@@ -8,6 +8,10 @@ body{
     font-family: "IBM Plex Sans", sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 /*Cabeçalho*/
 
 .header{
@@ -42,6 +46,8 @@ body{
     background: none;
     border:transparent;
     transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    color: black;
 }
 .option-button:hover{
     border-bottom:2px solid #BC6D0A;

@@ -33,3 +33,4 @@ buttonEquipe.forEach((sectionAbrir) => {
     
     })
 })
+
