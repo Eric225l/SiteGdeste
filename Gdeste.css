@@ -263,7 +263,6 @@ body{
 
 .seta-equipes{
     transition: 0.2s all ease-in-out;
-
 }
 
 .seta-equipes-active{
@@ -430,7 +429,24 @@ body{
     height: 600px;
     width: 100%;
     background-color: #BAB7AF;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
 }
+
+.imagens-lab{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.img-lab{
+    height: 200px;
+    width: 400px;
+}
+
 
 /*Fim da pagina Instalação*/
 
