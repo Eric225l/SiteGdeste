@@ -21,8 +21,14 @@ html{
     display:flex;
     align-items:center;
     justify-content:space-around;
-    
-} 
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.conteudo{
+    margin-top: 80px;
+}
 
 .img-logo-cabecalho{
     height:35px;
@@ -61,6 +67,8 @@ html{
 
 /*Fim Do Cabeçalho*/
 
+
+
 /*Pagina O que Fazemos*/
 
 .NOS{
@@ -72,6 +80,8 @@ html{
     justify-content: start;
     align-items: center;
     flex-direction: column;
+    scroll-margin-top:80px;
+
 }
 .div-text-nos{
     width: 80%;
@@ -168,6 +178,7 @@ html{
     justify-content: start;
     flex-direction: column;
     transition: 0.2s all ease-in-out;
+    scroll-margin-top:80px;
 }
 
 .EQUIPES-ACTIVE{
@@ -298,6 +309,7 @@ html{
     align-items: center;
     justify-content: start;
     flex-direction: column;
+    scroll-margin-top: 80px;
 }
 
 .div-text-publicacoes{
@@ -440,12 +452,12 @@ html{
     justify-content: start;
     flex-direction: column;
     gap: 20px;
+    scroll-margin-top: 80px;
 }
 
 .div-text-instalacao{
     height: 90px;
     width: 80%;
-    
     margin-top: 30px;
     display: flex;
     justify-content: end;
@@ -485,10 +497,8 @@ html{
 .img-lab{
     height: 400px;
     width: 700px;
-    border-radius: 10px;
     margin-left: 20px;
 }
-
 
 /*Fim da pagina Instalação*/
 
@@ -502,6 +512,7 @@ html{
     justify-content: start;
     flex-direction: column;
     gap: 40px;
+    scroll-margin-top: 80px;
 }
 
 .div-text-institucional{
