@@ -471,7 +471,7 @@ html{
 }
 
 .div-imagens-lab{
-    height: 400px;
+    height: 410px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -494,10 +494,27 @@ html{
     to{translate:-100%}
 }
 
+.plate-img{
+    height: 380px;
+    width: 630px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
+}
+
 .img-lab{
-    height: 400px;
-    width: 700px;
-    margin-left: 20px;
+    height: 370px;
+    width: 620px; 
+    transition: 0.2s all ease-in-out;
+    border-radius: 5px;
+}
+
+.img-lab:hover{
+    height: 373px;
+    width: 624px;
+    box-shadow: 0px 0px 10px black;
+    transition: 0.2s all ease-in-out;
 }
 
 /*Fim da pagina Instalação*/
