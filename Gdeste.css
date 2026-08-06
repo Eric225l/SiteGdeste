@@ -592,6 +592,17 @@ html{
     border-bottom: 2px solid #BC6D0A;
 }
 
+.overlay{
+    display: none;
+}
+
+.overlay-active{
+    position:absolute;
+    height: 190%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 10000;
+}
 
 /*Fim da pagina Institucional*/
 
