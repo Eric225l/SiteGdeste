@@ -34,3 +34,20 @@ buttonEquipe.forEach((sectionAbrir) => {
     })
 })
 
+let buttonVerMais = document.querySelector("#button-ver-mais");
+let buttonFechar = document.querySelector("#button-fechar");
+let overlay = document.querySelector("#overlay");
+let popUp = document.querySelector("#pop-up-historia");
+let body = document.getElementsByTagName("body")[0];
+
+buttonVerMais.addEventListener("click", ()=>{
+    overlay.className = "overlay-active";
+    popUp.className = "pop-up-historia-active";
+    body.style.overflow = "hidden";
+})
+
+buttonFechar.addEventListener("click", ()=>{
+    overlay.className = "overlay";
+    popUp.className = "pop-up-historia";
+    body.style.overflow = "auto";
+})
