@@ -8,5 +8,7 @@ buttonInvit.addEventListener("click", (e)=>{
     let formObject = Object.fromEntries(formData);
 
     console.log(formObject)
+
+    
 })
 
