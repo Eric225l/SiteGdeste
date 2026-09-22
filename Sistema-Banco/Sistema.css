@@ -44,7 +44,7 @@ body{
 
 .invit-member{
     height: 400px;
-    width: 35%;   
+    width: 32%;   
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -77,8 +77,8 @@ body{
 
 .list-members{
     display: flex;
-    height: 500px;
-    width: 60%;
+    height: 450px;
+    width: 65%;
     background-color: rgb(255, 255, 255);
     justify-content: center;
 }
