@@ -1,14 +1,31 @@
-let form = document.querySelector("#invit-member");
-let buttonInvit = document.querySelector("#button-submit-member");
+let formMembers = document.querySelector("#invit-member");
+let buttonInvitMembers = document.querySelector("#button-submit-member");
 
-buttonInvit.addEventListener("click", (e)=>{
+buttonInvitMembers.addEventListener("click", (e)=>{
     e.preventDefault()
     
-    let formData = new FormData(form)
+    let formData = new FormData(formMembers)
     let formObject = Object.fromEntries(formData);
 
     console.log(formObject)
 
     
 })
+
+//Area das operações de publicações
+
+let formPublications = document.querySelector("#invit-publi");
+let buttonInvitPubli = document.querySelector("#button-submit-publi");
+
+buttonInvitPubli.addEventListener("click", (e)=>{
+    e.preventDefault();
+
+    let formData = new FormData(formPublications);
+    let formObject = Object.fromEntries(formData);
+
+    console.log(formObject);
+
+})
+
+
 

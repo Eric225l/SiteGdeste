@@ -10,32 +10,42 @@
     <header class="header"></header>
     <main class="main">
         <div class="member-publi">
-            <button class="area-member">Membros</button>
-            <button class="area-publi">Publicações</button>
+            <button class="area-member" id="area-member">Membros</button>
+            <button class="area-publi" id="area-publi">Publicações</button>
         </div>
         <div class="operations-members-publi">
 
             <!-- Area dos membros -->
 
             <div class="operations-members">
+
+                <!--Area de envio de membros-->
+
                 <form id="invit-member" class="invit-member">
-                    <h2>Adicionar membro</h2>
+                    <h2 class="title-invit">Adicionar membro</h2>
                     <div class="area-data-member">
                         <div class="area-input">
-                            <label class="label-members">Nome:</label>
+                            <label class="label-members">Nome</label>
                             <input type="text" id="name-member" name="nameMember" class="input-members">
                         </div>
                         <div class="area-input">
-                            <label class="label-members">Curso:</label>
+                            <label class="label-members">Curso</label>
                             <input type="text" id="curse-member" name="curseMember" class="input-members">
                         </div>
                         <div class="area-input">
-                            <label class="label-members">Time:</label>
+                            <label class="label-members">Time</label>
                             <input type="text" id="time-member" name="timeMember" class="input-members">
+                        </div>
+                        <div class="area-input">
+                            <label class="label-members">Link Lattes</label>
+                            <input type="text" id="time-member" name="linkLattes" class="input-members">
                         </div>
                     </div>
                     <button type="submit" id="button-submit-member">Enviar</button>
                 </form>
+
+                <!--Lista de membros-->
+
                 <div class="list-members">
                     <div class="member">
                         <span>Eric Lourenco Verissimo</span>
@@ -51,22 +61,83 @@
             <!-- Area das publicações -->
 
             <div class="operations-publi">
-                <div class="button-left">
-                    <button>left</button>
+
+                <!--botão de navegação direito-->
+
+                <div class="div-button-navi">
+                    <button class="navigate-publi" id="navigate-publi-left">.</button>
                 </div>
-                <div class="invit-publi"></div>
-                <div class="list-publi"></div>
-                <div class="button-right">
-                    <button>right</button>
+
+                <!--Area de envio de publicações-->
+
+                <div class="area-invit-publi">
+                    <form class="invit-publi" id="invit-publi">
+                        <h1>Adicionar publicação</h1>
+                        <div class="area-data-publi">
+                            <div class="area-input-geral">
+                                <div class="area-input">
+                                    <label>Título</label>
+                                    <input type="text" name="title-publi" class="input-publi">
+                                </div>
+                                <div class="area-input-local">
+                                    <div class="area-input">
+                                        <label>Ano</label>
+                                        <input type="text" name="year-publi" class="input-publi" id="input-ano">
+                                    </div>
+                                    <div class="area-input">
+                                        <label>Localização</label>
+                                        <input type="text" name="local-publi" class="input-publi" id="input-local">
+                                    </div>
+                                </div>
+                                <div class="area-input">
+                                    <label>Tipo de pesquisa</label>
+                                    <input type="text" name="type-publi" class="input-publi">
+                                </div>
+                            </div>
+
+                            <div class="area-input">
+                                <label>Texto de pesquisa</label>
+                                <textarea name="text-publi" id="" cols="55" rows="12"></textarea>
+                            </div>
+                        </div>
+                        <button id="button-submit-publi">Enviar</button>
+                    </form>
+                </div>
+
+                <!--Lista de publicações-->
+
+                <div class="list-publi">
+                    <div class="div-publi">
+                        <div class="publicacao">
+                            <section class="tipo-publi">
+                                <p class="text-tipo">TCC</p>
+                                <div>
+                                    <button id="editPubli">E</button>
+                                    <button id="delPubli">D</button>
+                                </div>
+                            </section>
+                            <section class="titulo-publi">Simpósio Brasileiro de Engenharia de Sistemas Computacionais: II SBESC</section>
+                            <section class="localizacao-publi">
+                                <p class="lugar-publi">Local: UFPA, Campus Guamá</p>
+                                <p class="ano-publi">Ano: 2012</p>
+                            </section>
+                            <section class="text-publi">
+                                Trabalho(s): Construindo Veículo Teleoperado com Arduíno para Auxílio no Ensino de Sistemas Embarcados e Robótica Móvel.
+                            </section>                  
+                        </div>
+                    </div>
+                </div>
+
+                <!--Botão de navegação esquerdo-->
+
+                <div class="div-button-navi">
+                    <button class="navigate-publi" id="navigate-publi-right">.</button>
                 </div>
             </div>
-
-
-
         </div>
     </main>
 
     <script src="Sistema.js"></script>
-    <script src=""></script>
+    <script src="SistemaLayout.js"></script>
 </body>
 </html>

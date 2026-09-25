@@ -1,13 +1,21 @@
+/*Ibm Plex Sans e JetBrains Mono*/
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
 body{
     margin: 0;
     padding: 0;
     background-color: #EBF3F3;
+    font-family: "IBM Plex Sans", sans-serif;
 }
 
 .header{
     height: 150px;
     width: 100%;
 }
+
+
+/*Area insert membros e publicações*/
+
 
 .main{
     height: 550px;
@@ -17,49 +25,8 @@ body{
     flex-direction: column;
 }
 
-.member-publi{
-    height: 50px;
-    width: 85%;
-    border-bottom: 1px solid black;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding: 10px;
-}
-
-.operations-members-publi{
-    height:500px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.operations-members{
-    height: 500px;
-    width: 80%;
-    display: none;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.invit-member{
-    height: 400px;
-    width: 32%;   
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    background-color: #a7a5a2;
-}
-
-.area-data-member{
-    height: 200px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+.title-invit{
+    margin: 0;
 }
 
 .area-input{
@@ -70,9 +37,14 @@ body{
     width: 80%;
 }
 
+
+/*Area de membros*/
+
+
 .input-members{
-    height: 23px;
-    width: 100%
+    height: 30px;
+    width: 100%;
+    font-size: 18px;
 }
 
 .list-members{
@@ -94,28 +66,265 @@ body{
     margin: 20px;
 }
 
+.member-publi{
+    height: 50px;
+    width: 85%;
+    border-bottom: 1px solid black;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+
+/*Area de envio de membros*/
+
+
+.operations-members-publi{
+    height:500px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.operations-members{
+    height: 500px;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.invit-member{
+    height: 420px;
+    width: 32%;   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20px;
+    background-color: #a7a5a2;
+}
+
+.area-data-member{
+    height: 250px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+
 /*Area das publicações*/
+
 
 .operations-publi{
     height: 550px;
-    width: 90%;
-    background-color: antiquewhite;
+    width: 80%;
     margin-top: 20px;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: space-around;
 }
 
-.invit-publi{
-    height: 550px;
-    width: 90%;
-    background-color: aliceblue;
+.div-button-navi{
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigate-publi{
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+}
+
+#navigate-publi-left{
     display: none;
+}
+
+#navigate-publi-right{
+    display: flex;
 }
 
 .list-publi{
     height: 550px;
-    width: 90%;
-    background-color: #7098bb;
+    width: 80%;
+    background-color: white;
+    display: none;
+    grid-template-columns: auto auto auto;
+    overflow-y: auto;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+}
+
+
+/*Area de envio de publicação*/
+
+
+.area-invit-publi{
+    height: 550px;
+    width: 1100px;
+    background-color: #BAB7AF;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.invit-publi{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content:space-around;
+    flex-direction: column;
+}
+
+.area-data-publi{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.area-input-local{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.area-input-geral{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-publi{
+    height: 30px;
+    width: 450px;
+    font-size:18px ;
+}
+
+#input-ano{
+    width: 150px;
+}
+
+#input-local{
+    width: 250px;
+}
+
+
+/*Card de publicação*/
+
+
+.div-publi{
+    height: 400px;
+    width: 310px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.publicacao{
+    height: 390px;
+    width: 300px;
+    background-color: #BAB7AF;
+    border-radius: 10px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.2s ease-in-out
+}
+
+.publicacao:hover{
+    height: 392px;
+    width: 302px;
+    box-shadow:0px 0px 5px black
+}
+
+.tipo-publi{
+    width: 100%;
+    height: 30px;
+    margin-top: 10px ;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 100px;
+}
+
+.text-tipo{
+    height: 30px;
+    width: 20%;
+    margin: 0;
+    background-color: #14213D;   
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    
+}
+
+.titulo-publi{
+    width: 100%;
+    height: 80px;
+    margin-top:10px ;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 10px;
+    
+}
+
+.localizacao-publi{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    margin-top: 10px;
+}
+
+.lugar-publi{
+    height: 20px;
+    width: 50%;
+    background-color: #14213D;
+    border-radius: 5px;
+    margin: 0;
+    margin-left: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.ano-publi{
+    height: 20px;
+    width: 20%;
+    background-color: #14213D;
+    border-radius: 5px;
+    margin: 0;
+    margin-right: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-publi{
+    width: 80%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    margin-top:10px ;
+    font-size: 16px;
 }
