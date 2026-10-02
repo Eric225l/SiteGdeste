@@ -49,7 +49,7 @@ body{
 
 .list-members{
     display: flex;
-    height: 450px;
+    height:500px;
     width: 65%;
     background-color: #ffffff;
     justify-content: center;
@@ -88,7 +88,7 @@ body{
 }
 
 .operations-members{
-    height: 500px;
+    height: 550px;
     width: 80%;
     display: flex;
     justify-content: space-around;
@@ -96,7 +96,7 @@ body{
 }
 
 .invit-member{
-    height: 420px;
+    height: 500px;
     width: 32%;   
     display: flex;
     flex-direction: column;
@@ -107,7 +107,7 @@ body{
 }
 
 .area-data-member{
-    height: 250px;
+    height: 350px;
     width: 100%;
     display: flex;
     flex-direction: column;
