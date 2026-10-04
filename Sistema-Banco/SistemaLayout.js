@@ -1,43 +1,43 @@
-//navegação da area de publicações e membros
+let buttonMembers = document.querySelector("#button-operations-members");
+let buttonPublication = document.querySelector("#button-operations-publications");
 
-let buttonMembers = document.querySelector("#area-member");
-let buttonPubli = document.querySelector("#area-publi");
+let groupMember = document.querySelector(".group-member");
+let groupPublications = document.querySelector(".group-publications")
 
-let areaMembers = document.querySelector(".operations-members");
-let areaPubli = document.querySelector(".operations-publi");
-
+buttonPublication.addEventListener("click", ()=>{
+    groupPublications.style.display = "flex";
+    groupMember.style.display = "none"
+})
 
 buttonMembers.addEventListener("click", ()=>{
-    areaMembers.style.display = "flex";
-    areaPubli.style.display = "none";
+    groupMember.style.display = "flex"
+    groupPublications.style.display = "none";
 })
 
-buttonPubli.addEventListener("click", ()=>{
-    areaPubli.style.display = "flex";
-    areaMembers.style.display = "none";
+
+let navigateLeft = document.querySelector("#button-left");
+let navigateRight = document.querySelector("#button-right");
+
+let invitPublication = document.querySelector(".invit-publication")
+let listPublications = document.querySelector(".list-publications");
+
+navigateLeft.addEventListener("click", ()=>{
+    console.log("left")
+
+    invitPublication.style.display = "flex";
+    listPublications.style.display = "none";
+
+    navigateLeft.style.display = "none";
+    navigateRight.style.display = "flex";
 })
 
-//navegação da area de publicações
+navigateRight.addEventListener("click", ()=>{
+    console.log("right");
+    
+    listPublications.style.display = "flex";
+    invitPublication.style.display = "none";
 
-let buttonNavigateLeft = document.querySelector("#navigate-publi-left");
-let buttonNavigateRight = document.querySelector("#navigate-publi-right");
-
-let invitPubli = document.querySelector(".area-invit-publi");
-let listPubli = document.querySelector(".list-publi");
- 
-buttonNavigateLeft.addEventListener("click", ()=>{
-    invitPubli.style.display = "flex";
-    listPubli.style.display = "none";
-
-    buttonNavigateRight.style.display = "flex";
-    buttonNavigateLeft.style.display = "none";
+    navigateRight.style.display = "none";
+    navigateLeft.style.display = "flex";
 })
 
-buttonNavigateRight.addEventListener("click", ()=>{
-    invitPubli.style.display = "none";
-    listPubli.style.display = "grid";
-
-    buttonNavigateLeft.style.display = "flex";
-    buttonNavigateRight.style.display = "none";
-
-})
