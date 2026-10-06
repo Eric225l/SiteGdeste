@@ -277,7 +277,7 @@ main{
 .invit-publication{
     padding-top:20px;
     height: 630px;
-    width: 80%;
+    width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -318,8 +318,8 @@ main{
 
 .list-publications{
     padding-top:20px ;
-    height: 600px;
-    width: 80%;
+    height: 630px;
+    width: 90%;
     display: none;
     grid-template-columns: auto auto auto;
     justify-content: center;
