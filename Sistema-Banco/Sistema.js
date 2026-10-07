@@ -1,7 +1,11 @@
-const url = "http://localhost:3000/sistema";
+/*Area para as operações nos membros presentes no laboratorio */
 
-let formMember = document.querySelector(".invit-member");
-let buttonInvitMember = document.querySelector("#button-invit-member");
+const url = "http://localhost:3000/sistema";/*Link para as rotas das operações nos membros*/
+
+const formMember = document.querySelector(".invit-member");
+const buttonInvitMember = document.querySelector("#button-invit-member");
+
+/*Requisição para listar os membros do banco de dados*/
 
 async function listMembers(){
     try{
@@ -40,6 +44,8 @@ async function listMembers(){
             divMember.appendChild(divButtons)
             listMembers.appendChild(divMember)
 
+            /*Requesição para deletar membros do banco de dados*/
+
             buttonDel.addEventListener("click", ()=>{
                 async function deleteMember(){
                     try{
@@ -64,6 +70,8 @@ async function listMembers(){
                 window.location.reload();
             })
 
+            /*Requisição para editar os dados de um membro no banco de dados*/
+
             buttonEdt.addEventListener("click", ()=>{
                 console.log("edt")
             })
@@ -75,6 +83,8 @@ async function listMembers(){
 }
 
 listMembers();
+
+/*Requisição para criar um membro dentro do banco de dados */
 
 buttonInvitMember.addEventListener("click", (evt)=>{
     const formData = new FormData(formMember);
@@ -113,6 +123,10 @@ buttonInvitMember.addEventListener("click", (evt)=>{
     insertMember();
     window.location.reload()
 })
+
+/*Final das operações dos membros presentes no laboratório*/
+
+/*Area para as operações das publicações feitas pelo laboratorio */
 
 let formPublication = document.querySelector(".invit-publication");
 let buttonInvitPublication = document.querySelector(".button-invit-publication");
