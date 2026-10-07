@@ -71,6 +71,11 @@ main{
     justify-content: center;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
+
+.text-load{
+    margin-top: 20px;
+}
+
 .titles{
     height: 60px;
     width: 92%;
@@ -235,6 +240,7 @@ main{
 }
 
 .list-members{
+    
     padding-bottom: 30px;
     height: 550px;
     width: 58%;
@@ -248,19 +254,37 @@ main{
     overflow-y: auto;
     overflow-x: hidden;
     scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;    
+    -webkit-overflow-scrolling: touch;
+    font-family: "JetBrains Mono", monospace;   
 }
 
+/*Card dos membros*/
+
 .member{
-    height: 60px;
-    width: 92%;
     margin-top:20px;
+    height: 80px;
+    width: 92%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     border: 1px solid #d1d1d1;
     border-radius: 10px;
     background-color: white;
+    font-size: 14px;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
     flex-shrink: 0;
     will-change: transform;
+}
+
+.member-infos{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+    margin-left:3% ;
+}
+
+.member-buttons{
+    margin-right: 3%;
 }
 
 /*Area Publicações*/

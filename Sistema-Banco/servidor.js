@@ -7,18 +7,28 @@ const cors = require("cors");
 const server = express();
 const port = process.env.PORT;
 
-server.use(cors());
+server.use(cors({
+    origin: "*",
+    method: ["GET", "POST", "PATCH", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    optionsSuccessStatus:200
+}));
 server.use(express.json());
 
 server.get("/sistema", async (req, res)=>{
-    const members = await database.databaseVisualize();
+    const members = await database.databaseVisualizeMember();
     res.json(members);
 })
 
 server.post("/sistema", async (req, res)=>{
-    console.log("dados enviados")
-    await database.databaseInsert(req.body);
-    res.sendStatus(201);
+    await database.databaseInsertMember(req.body);
+    res.send(201).json({message: "Dados criados"});
+})
+
+server.delete("/sistema/:id", async (req, res)=>{
+    console.log(req.params.id)
+    await database.databaseDeleteMember(req.params.id);
+    res.send(204).json({message: "Dados deletados"});
 })
 
 server.listen(port, ()=>{
