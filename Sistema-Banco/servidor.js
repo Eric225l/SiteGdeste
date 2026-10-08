@@ -15,24 +15,31 @@ server.use(cors({
 }));
 server.use(express.json());
 
-server.get("/sistema", async (req, res)=>{
+/*Rotas de requisção para os membros*/
+
+server.get("/sistema/membros", async (req, res)=>{
     const members = await database.databaseVisualizeMember();
     res.json(members);
 })
 
-server.post("/sistema", async (req, res)=>{
+server.post("/sistema/membros", async (req, res)=>{
     await database.databaseInsertMember(req.body);
-    res.send(201).json({message: "Dados criados"});
+    res.status(201).json({message: "Dados criados"});
 })
 
-server.delete("/sistema/:id", async (req, res)=>{
-    console.log(req.params.id)
+server.delete("/sistema/membros/:id", async (req, res)=>{
     await database.databaseDeleteMember(req.params.id);
-    res.send(204).json({message: "Dados deletados"});
+    res.status(204).json({message: "Dados deletados"});
 })
 
-server.patch("/sistema/:id", (req, res)=> {
-    console.log(req.params.id);
+server.patch("/sistema/membros/:id",async (req, res)=> {
+    await database.databaseUpdateMember(req.params.id, req.body);
+    res.status(200).json({message:"Dados atualizados"});
+})
+
+/*Rotas de requisição para as publicações */
+
+server.post("/sistema/publicações", (req, res)=>{
     console.log(req.body);
 })
 

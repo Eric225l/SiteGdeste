@@ -58,9 +58,9 @@ async function databaseDeleteMember(id){
         client = await conectionDatabase();
         const sql = "DELETE FROM membros WHERE id=$1";
         const values = [id];
-        const res = await client.query(sql, values)
+        const res = await client.query(sql, values);
     }catch(err){
-        console.log(`ERRO de operação patch: ${err}`);
+        console.log(`ERRO de operação delete: ${err}`);
     }finally{
         if(client){
             client.release();
@@ -69,8 +69,26 @@ async function databaseDeleteMember(id){
     
 }
 
+async function databaseUpdateMember(id, user){
+    let client;
+    try{
+        client = await conectionDatabase();
+        const sql = "UPDATE membros SET nome=$1, time=$2, curso=$3, status=$4, lattes=$5 WHERE id=$6"
+        const values = [user.nome, user.time, user.curso, user.status, user.lattes, id];
+        const res = await client.query(sql, values);
+
+    }catch(err){
+         console.log(`ERRO de operação patch: ${err}`);
+    }finally{
+        if(client){
+            client.release()
+        }
+    }
+}
+
 module.exports = {
     databaseInsertMember,
     databaseVisualizeMember,
-    databaseDeleteMember
+    databaseDeleteMember,
+    databaseUpdateMember
 }

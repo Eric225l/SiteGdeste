@@ -9,7 +9,7 @@ const buttonInvitMember = document.querySelector("#button-invit-member");
 async function listMembers(){
     try{
         let listMembers = document.querySelector(".list-members")
-        const response = await fetch(url);
+        const response = await fetch(`${url}/membros`);
         const data = await response.json();
         
         listMembers.textContent = "";
@@ -48,7 +48,7 @@ async function listMembers(){
             buttonDel.addEventListener("click", ()=>{
                 async function deleteMember(){
                     try{
-                        const response = await fetch(`${url}/${member.id}`,{
+                        const response = await fetch(`${url}/membros/${member.id}`,{
                             method: "DELETE",
                             headers: {
                                 "Content-Type":"application/json"
@@ -90,30 +90,45 @@ async function listMembers(){
 
                 let buttonEditMember = document.querySelector("#button-edit-member");
 
-                buttonEditMember.addEventListener("click", (evt)=>{
-                    evt.preventDefault();
-                    
+                buttonEditMember.addEventListener("click", (evt)=>{  
                     let formEditMember = document.querySelector(".div-edit-member");
                     let formData = new FormData(formEditMember);
                     let formObject = Object.fromEntries(formData);
              
                     async function editMembers(){
-                        const response = await fetch(`${url}/${member.id}`, {
-                            method: "PATCH",
-                            headers: {
-                                "Content-Type":"application/json",
-                            },
-                            body: JSON.stringify({
-                                nome: formObject.nome,
-                                curso: formObject.curso,
-                                time: formObject.time,
-                                lattes: formObject.lattes,
-                                status: formObject.status
+                        try{
+                            const response = await fetch(`${url}/membros/${member.id}`, {
+                                method: "PATCH",
+                                headers: {
+                                    "Content-Type":"application/json",
+                                },
+                                body: JSON.stringify({
+                                    nome: formObject.nome,
+                                    curso: formObject.curso,
+                                    time: formObject.time,
+                                    lattes: formObject.lattes,
+                                    status: formObject.status
+                                })
+
                             })
-                        })
+
+                            const data = await response.json()
+                            console.log(data);
+
+                            return await response;
+                        }catch(err){
+                            console.log(`ERRO patch: ${err}`);
+                        }
                     }
 
                     editMembers()
+
+                    divEditBlur.addEventListener("click", (e)=>{
+                        if(e.target == divEditBlur){
+                            divEditBlur.style.display = "none"
+                        }
+                        
+                    })
                 })
                 
             })
@@ -138,7 +153,7 @@ buttonInvitMember.addEventListener("click", (evt)=>{
     
     async function insertMember(){
         try{
-            const response = await fetch(url, {
+            const response = await fetch(`${url}/membros`, {
                 method: "POST",
                 headers: {
                     "Content-Type":"application/json",
