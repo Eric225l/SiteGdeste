@@ -229,7 +229,7 @@ main{
     font-family: "IBM Plex Sans", sans-serif;
 }
 
-.button-invit-member{
+.button-member{
     margin-top: 30px;
     height: 60px;
     width: 80%;
@@ -256,16 +256,6 @@ main{
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     font-family: "JetBrains Mono", monospace;   
-}
-
-/*Blur de edição*/
-
-.blur-active{
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    z-index: 10;
-    background-color: rgba(0, 0 ,0 , 0.5);
 }
 
 /*Card dos membros*/
@@ -295,6 +285,35 @@ main{
 
 .member-buttons{
     margin-right: 3%;
+}
+
+/*Blur de edição*/
+
+.blur{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0, 0 ,0 , 0.5);
+    z-index: 10;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Edição do membro*/
+
+.div-edit-member{
+    height:700px;
+    width:30%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    font-size: 20px;
+    font-family: "IBM Plex Sans", sans-serif;
 }
 
 /*Area Publicações*/

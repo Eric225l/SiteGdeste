@@ -7,11 +7,6 @@ const pool = new Pool({
 async function conectionDatabase(){  
     try{
         const client = await pool.connect();
-        console.log("conexão com o banco");
-
-        const res = await client.query("select now()");
-        console.log(res.rows[0]);
-
         return client;
 
     }catch(err){
@@ -20,8 +15,6 @@ async function conectionDatabase(){
     }
     
 }
-
-conectionDatabase();
 
 async function databaseInsertMember(user){
     let client;

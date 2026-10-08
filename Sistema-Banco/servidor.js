@@ -31,6 +31,11 @@ server.delete("/sistema/:id", async (req, res)=>{
     res.send(204).json({message: "Dados deletados"});
 })
 
+server.patch("/sistema/:id", (req, res)=> {
+    console.log(req.params.id);
+    console.log(req.body);
+})
+
 server.listen(port, ()=>{
     console.log("Servidor abriu");
 });
