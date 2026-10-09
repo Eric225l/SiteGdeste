@@ -108,6 +108,7 @@ async function databaseVisualizePublication(){
 
 async function databaseInsertPublication(publi){
     let client;
+    
     try{
         client = await conectionDatabase();
         const sql = "INSERT INTO publicacoes(tipo, local, ano, titulo, texto) VALUES ($1, $2, $3, $4, $5)";
@@ -124,6 +125,22 @@ async function databaseInsertPublication(publi){
     }
 }
 
+async function databaseDeletePublication(id){
+    let client;
+
+    try{
+        client = await conectionDatabase();
+        const sql = "DELETE FROM publicacoes WHERE id=$1";
+        const values = [id];
+        const res = await client.query(sql, values)
+    }catch(err){
+        console.log(`Erro operação delete publication: ${err}`);
+    }finally{
+        if(client){
+            client.release();
+        }
+    }
+}
 
 module.exports = {
     databaseInsertMember,
@@ -131,5 +148,6 @@ module.exports = {
     databaseDeleteMember,
     databaseUpdateMember,
     databaseInsertPublication,
-    databaseVisualizePublication
+    databaseVisualizePublication,
+    databaseDeletePublication
 }

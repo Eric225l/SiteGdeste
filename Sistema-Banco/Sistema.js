@@ -72,8 +72,10 @@ async function listMembers(){
             
             buttonEdt.addEventListener("click", ()=>{
                 let divEditBlur = document.querySelector(".blur");
-                
+                let divEditmember = document.querySelector(".div-edit-member");
+
                 divEditBlur.style.display = "flex";
+                divEditmember.style.display = "flex";
 
                 let inputName = document.querySelector("#input-name-edit");
                 let inputCourse = document.querySelector("#input-course-edit");
@@ -122,12 +124,6 @@ async function listMembers(){
 
                     editMembers()
 
-                    divEditBlur.addEventListener("click", (e)=>{
-                        if(e.target == divEditBlur){
-                            divEditBlur.style.display = "none"
-                        }
-                        
-                    })
                 })
                 
             })
@@ -241,6 +237,62 @@ async function listPublication(){
             publication.appendChild(textPublication);
             divPublication.appendChild(publication)
             divListPublication.appendChild(divPublication);
+
+            buttonDel.addEventListener("click", ()=>{
+                async function deletePublication(){
+                    try{
+                        const res = await fetch(`${url}/publicacoes/${pbl.id}`, {
+                            method: "DELETE",
+                            headers:{
+                                "Content-Type":"application/json",
+                            }
+                        });
+
+                        const data = await res.json();
+                        console.log(data);
+
+                        return await res;                    
+                    }catch(err){
+                        console.log(`ERRO delete publicação: ${err}`);
+                    }
+                }
+
+                deletePublication();
+                window.location.reload();
+            })
+
+            buttonEdt.addEventListener("click", ()=>{
+                let divEditBlur = document.querySelector(".blur");
+                let formEditPublication = document.querySelector(".edit-publication");
+
+                divEditBlur.style.display = "flex";
+                formEditPublication.style.display = "flex";
+
+                let tipoEdit = document.querySelector("#input-tipo-edit");
+                let localEdit = document.querySelector("#input-local-edit");
+                let anoEdit = document.querySelector("#input-ano-edit");
+                let tituloEdit = document.querySelector("#textarea-titulo-edit");
+                let textoEdit = document.querySelector("#textarea-texto-edit");
+
+                tipoEdit.value = pbl.tipo;
+                localEdit.value = pbl.local;
+                anoEdit.value = pbl.ano; 
+                tituloEdit.value = pbl.titulo;
+                textoEdit.value = pbl.texto; 
+                
+                let buttonEditPublication = document.querySelector("#button-edit-publication");
+
+                buttonEditPublication.addEventListener("click", (evt)=>{
+                    evt.preventDefault();
+
+                    let formData = new FormData(formEditPublication);
+                    let formObject = Object.fromEntries(formData);
+
+                    console.log(formObject);
+
+                    
+                })
+            })
         })
 
     }catch(err){

@@ -34,7 +34,7 @@ navigateLeft.addEventListener("click", ()=>{
 navigateRight.addEventListener("click", ()=>{
     console.log("right");
     
-    listPublications.style.display = "flex";
+    listPublications.style.display = "grid";
     invitPublication.style.display = "none";
 
     navigateRight.style.display = "none";

@@ -50,6 +50,11 @@ server.post("/sistema/publicacoes", async (req, res)=>{
     res.status(201).json({message: "Dados criados"});
 })
 
+server.delete("/sistema/publicacoes/:id", async (req, res)=>{
+    await database.databaseDeletePublication(req.params.id);
+    res.status(204).json({message: "Dados deletados"});
+})
+
 server.listen(port, ()=>{
     console.log("Servidor abriu");
 });

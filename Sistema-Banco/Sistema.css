@@ -307,7 +307,7 @@ main{
     height:700px;
     width:30%;
     background-color: white;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -315,6 +315,23 @@ main{
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
     font-size: 20px;
     font-family: "IBM Plex Sans", sans-serif;
+}
+
+/*Edição da publicação*/
+
+.edit-publication{
+    background-color: white;
+    padding-top:20px;
+    height: 630px;
+    width: 60%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 10px;
+    font-family: "IBM Plex Sans", sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
 /*Area Publicações*/
@@ -332,7 +349,7 @@ main{
     padding-top:20px;
     height: 630px;
     width: 90%;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -375,13 +392,13 @@ main{
     height: 630px;
     width: 90%;
     background-color: #f4fafd;
-    display: none;
+    display: grid;
     grid-template-columns: auto auto auto;
     justify-content: center;
     gap: 10px;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 /*Card da publicação*/
