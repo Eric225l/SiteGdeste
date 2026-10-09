@@ -1,5 +1,4 @@
 /*Area para as operações nos membros presentes no laboratorio */
-
 const url = "http://localhost:3000/sistema";/*Link para as rotas das operações nos membros*/
 
 const buttonInvitMember = document.querySelector("#button-invit-member");
@@ -61,7 +60,7 @@ async function listMembers(){
                         return await response;
                         
                     }catch(err){
-                        console.log(`ERRO delete: ${err}`);
+                        console.log(`ERRO delete membro: ${err}`);
                     }
                 } 
                 
@@ -117,7 +116,7 @@ async function listMembers(){
 
                             return await response;
                         }catch(err){
-                            console.log(`ERRO patch: ${err}`);
+                            console.log(`ERRO patch membro: ${err}`);
                         }
                     }
 
@@ -135,7 +134,7 @@ async function listMembers(){
         });
         
     }catch(err){
-        console.log(`ERRO get: ${err}`)
+        console.log(`ERRO get membro: ${err}`)
     }
 }
 
@@ -174,7 +173,7 @@ buttonInvitMember.addEventListener("click", (evt)=>{
             return await response;
 
         }catch(err){
-            console.log(`ERRO post: ${err}`);
+            console.log(`ERRO post membro: ${err}`);
         }
     
     }
@@ -189,6 +188,67 @@ buttonInvitMember.addEventListener("click", (evt)=>{
 
 let formInvitPublication = document.querySelector(".invit-publication");
 let buttonInvitPublication = document.querySelector(".button-invit-publication");
+const divListPublication = document.querySelector(".list-publications");
+
+async function listPublication(){
+    try{
+        const response = await fetch(`${url}/publicacoes`);
+        const data = await response.json();
+
+        divListPublication.textContent = ""
+
+        data.forEach(pbl => {
+            const divPublication = document.createElement("div");
+            const publication = document.createElement("div");
+            const typePublication = document.createElement("section");
+            const typeText = document.createElement("p");  
+            const divOperationPublication = document.createElement("div");
+            const buttonEdt = document.createElement("button");
+            const buttonDel = document.createElement("button");
+            const titlePublication = document.createElement("div");
+            const divLocalization = document.createElement("div");
+            const localPublication = document.createElement("p");
+            const yearPublication = document.createElement("p");
+            const textPublication = document.createElement("p")
+
+            divPublication.className = "div-publication";
+            publication.className = "publication";
+            typePublication.className = "type-publication"
+            typeText.className = "type-text";
+            titlePublication.className = "title-publication";
+            divLocalization.className = "localization-publication";
+            localPublication.className = "local-publication";
+            yearPublication.className = "year-publication";
+            textPublication.className = "text-publication";
+
+            typeText.textContent = pbl.tipo;
+            buttonEdt.textContent = "Edt";
+            buttonDel.textContent = "Del";
+            titlePublication.textContent = pbl.titulo;
+            localPublication.textContent = pbl.local;
+            yearPublication.textContent = pbl.ano;
+            textPublication.textContent = pbl.texto;
+
+            typePublication.appendChild(typeText)
+            typePublication.appendChild(divOperationPublication)
+            divOperationPublication.appendChild(buttonEdt);
+            divOperationPublication.appendChild(buttonDel);
+            divLocalization.appendChild(localPublication);
+            divLocalization.appendChild(yearPublication);
+            publication.appendChild(typePublication);
+            publication.appendChild(titlePublication);
+            publication.appendChild(divLocalization);
+            publication.appendChild(textPublication);
+            divPublication.appendChild(publication)
+            divListPublication.appendChild(divPublication);
+        })
+
+    }catch(err){
+        console.log(`ERRO get publicação: ${err}`);
+    }
+}
+
+listPublication()
 
 buttonInvitPublication.addEventListener("click", (evt)=>{
     evt.preventDefault()
@@ -197,5 +257,32 @@ buttonInvitPublication.addEventListener("click", (evt)=>{
     const formObject = Object.fromEntries(formData);
 
     console.log(formObject)
+
+    async function insertPublication (){
+        try{
+            const response = await fetch(`${url}/publicacoes`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    tipo: formObject.tipo,
+                    local: formObject.local,
+                    ano: formObject.ano,
+                    titulo: formObject.titulo,
+                    texto: formObject.texto
+                })
+            })
+
+            const data = await response.json();
+            console.log(data)
+
+            return await response;
+        }catch(err){
+            console.log(`ERRO post publicação: ${err}`);
+        }
+    }
+
+    insertPublication();
 })
 

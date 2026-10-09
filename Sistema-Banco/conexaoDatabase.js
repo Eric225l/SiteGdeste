@@ -2,6 +2,7 @@ const { Pool } = require("pg")
 
 const pool = new Pool({
     connectionString: process.env.DATABASE_URL,
+    ssl: true
 })
 
 async function conectionDatabase(){  
@@ -86,9 +87,49 @@ async function databaseUpdateMember(id, user){
     }
 }
 
+/*Querys da tabela de publicações publicações */
+
+async function databaseVisualizePublication(){
+    let client;
+    try{
+        client = await conectionDatabase();
+        const sql = "SELECT * FROM publicacoes ORDER BY id";
+        const res = await client.query(sql);
+        return res.rows;
+    }catch(err){
+        console.log(`ERRO de operação get puclicação: ${err}`);
+        throw err;
+    }finally{
+        if(client){
+            client.release();
+        }
+    }
+}
+
+async function databaseInsertPublication(publi){
+    let client;
+    try{
+        client = await conectionDatabase();
+        const sql = "INSERT INTO publicacoes(tipo, local, ano, titulo, texto) VALUES ($1, $2, $3, $4, $5)";
+        const values = [publi.tipo, publi.local, publi.ano, publi.titulo, publi.texto];
+        const res = await client.query(sql, values);
+
+    }catch(err){
+        console.log(`Erro de operação post Publicação: ${err}`);
+        throw err;
+    }finally{
+        if(client){
+            client.release();
+        }
+    }
+}
+
+
 module.exports = {
     databaseInsertMember,
     databaseVisualizeMember,
     databaseDeleteMember,
-    databaseUpdateMember
+    databaseUpdateMember,
+    databaseInsertPublication,
+    databaseVisualizePublication
 }

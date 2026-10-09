@@ -74,6 +74,7 @@ main{
 
 .text-load{
     margin-top: 20px;
+    font-family: "IBM Plex Sans", sans-serif;
 }
 
 .titles{
@@ -211,7 +212,7 @@ main{
 .group-member{
     height: 650px;
     width: 90%;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: space-around;
     border-radius: 5px;
@@ -321,7 +322,7 @@ main{
 .group-publications{
     height: 700px;
     width: 85%;
-    display: none;
+    display: flex;
     justify-content: space-around;
     align-items: center;
     color:#4b4b4b
@@ -373,6 +374,7 @@ main{
     padding-top:20px ;
     height: 630px;
     width: 90%;
+    background-color: #f4fafd;
     display: none;
     grid-template-columns: auto auto auto;
     justify-content: center;
@@ -384,7 +386,7 @@ main{
 
 /*Card da publicação*/
 
-.div-publi{
+.div-publication{
     height: 400px;
     width: 310px;
     display: flex;
@@ -394,45 +396,47 @@ main{
     font-family: "IBM Plex Sans", sans-serif;
 }
 
-.publicacao{
+.publication{
     height: 390px;
     width: 300px;
-    background-color: #BAB7AF;
-    border-radius: 10px;
-    border: 1px solid black;
+    background-color: white;
     display: flex;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    border-radius: 5px;
     transition: all 0.2s ease-in-out
 }
 
-.publicacao:hover{
+.publication:hover{
     height: 392px;
-    width: 302px;
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    width: 301px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.tipo-publi{
-    width: 100%;
+.type-publication{
+    width: 80%;
     height: 30px;
     margin-top: 10px ;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.text-tipo{
-    height: 30px;
-    width: 20%;
+.type-text{
     margin: 0;
+    padding: 2px 16px;
+    height: 30px;
     background-color: #14213D;   
-    border-radius: 20px;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
-    margin-left: 20px;
     
 }
 
-.titulo-publi{
+.title-publication{
     width: 100%;
     height: 80px;
     margin-top:10px ;
@@ -443,8 +447,8 @@ main{
     
 }
 
-.localizacao-publi{
-    width: 100%;
+.localization-publication{
+    width: 90%;
     height: 30px;
     display: flex;
     justify-content: space-between;
@@ -452,13 +456,12 @@ main{
     margin-top: 10px;
 }
 
-.lugar-publi{
+.local-publication{
+    margin: 0;
+    padding: 1px 8px;
     height: 20px;
-    width: 50%;
     background-color: #14213D;
     border-radius: 5px;
-    margin: 0;
-    margin-left: 20px;
     color: white;
     display: flex;
     align-items: center;
@@ -466,12 +469,13 @@ main{
     
 }
 
-.ano-publi{
+.year-publication{
+    margin: 0;
+    padding: 1px 4px;
     height: 20px;
     width: 20%;
     background-color: #14213D;
     border-radius: 5px;
-    margin: 0;
     margin-right: 20px;
     color: white;
     display: flex;
@@ -479,12 +483,13 @@ main{
     justify-content: center;
 }
 
-.text-publi{
+.text-publication{
+    margin:0;
+    margin-top:10px ;
     width: 80%;
     height: 200px;
     display: flex;
     justify-content: center;
     align-items: start;
-    margin-top:10px ;
     font-size: 16px;
 }

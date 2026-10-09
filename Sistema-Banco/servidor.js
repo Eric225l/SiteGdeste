@@ -39,8 +39,15 @@ server.patch("/sistema/membros/:id",async (req, res)=> {
 
 /*Rotas de requisição para as publicações */
 
-server.post("/sistema/publicações", (req, res)=>{
+server.get("/sistema/publicacoes", async (req, res)=>{
+    const publications = await database.databaseVisualizePublication();
+    res.json(publications);
+})
+
+server.post("/sistema/publicacoes", async (req, res)=>{
     console.log(req.body);
+    await database.databaseInsertPublication(req.body);
+    res.status(201).json({message: "Dados criados"});
 })
 
 server.listen(port, ()=>{
